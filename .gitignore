@@ -2,5 +2,5 @@ node_modules
 .eslintrc
 .idea
 dist
-build
+test-app/build
 .DS_Store

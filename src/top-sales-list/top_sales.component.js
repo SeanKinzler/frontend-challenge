@@ -1,14 +1,12 @@
-import React from 'react';
-import Styles from './top_sales.scss';
-
+import React, {Component} from 'react';
+import Styles from './top_sales.css';
+import axios from 'axios';
 
 
 // export default TopSalesList;
 //write top sales list component here
-class TopSalesList extends React.Component  {
+export default class TopSalesList extends Component  {
     render() {
-        return <div>TopSalesList Here</div>
+        return (<div>TopSalesList Here</div>)
     }
 };
-
-export default TopSalesList;

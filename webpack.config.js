@@ -1,7 +1,8 @@
+var path = require('path');
+
 (function() {
 
     'use strict';
-
     module.exports = [
         {
             name: 'TopSalesList',
@@ -125,8 +126,9 @@
                 fs: 'empty',
                 tls: 'empty',
                 net: 'empty'
-            }
+            },
         }
+
     ];
 
 })();

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "HotSchedules Frontend Challenge",
   "scripts": {
-    "build": "webpack --config ./webpack.config.js --colors --progress --watch"
+    "build": "webpack --config ./webpack.config.js --colors --progress --watch",
+    "devServ": "node_modules/.bin/webpack-dev-server"
   },
   "keywords": [
     "React"
@@ -11,6 +12,7 @@
   "author": "Alex Haines",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.16.1",
     "lodash": "^4.17.4",
     "ngreact": "^0.3.0",
     "react": "^15.4.2",
@@ -41,6 +43,7 @@
     "react-svelte-components": "^1.0.0",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

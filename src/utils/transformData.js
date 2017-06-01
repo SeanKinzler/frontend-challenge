@@ -9,7 +9,7 @@ const transformData = (data) => {
       if (toRet[item.product_id] === undefined) {
         toRet[item.product_id] = {};
         toRet[item.product_id].count = 1;
-        toRet[item.product_id].name = item.name;
+        toRet[item.product_id].name = capitalizeOnlyFirstLetters(item.name);
         let tempRev = calcRevenue(item);
         toRet[item.product_id].revenue = tempRev;
       } else {
@@ -36,6 +36,14 @@ const calcRevenue = (item) => {
   }
 
   return Math.round(tempRev * 100)/100;
+}
+
+const capitalizeOnlyFirstLetters = (string) => {
+  let lowerC = string.toLowerCase();
+  let toRet = lowerC.split(' ').map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  }).join(' ');
+  return toRet;
 }
 
 export default transformData

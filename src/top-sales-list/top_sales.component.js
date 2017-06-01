@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Styles from './top_sales.css';
 import axios from 'axios';
 import transformData from '../utils/transformData.js';
+import TopSalesItem from './top_sales_item.js';
 import map from 'lodash';
 
 // export default TopSalesList;
@@ -20,7 +21,6 @@ export default class TopSalesList extends Component  {
         responseType: 'json',
       }).then((data) => {
         let formatedData = transformData(data.data);
-        console.log(formatedData);
         this.state.items = formatedData;
         this.setState(this.state);
       })
@@ -28,11 +28,14 @@ export default class TopSalesList extends Component  {
 
     render() {
         return (
-          <div>
+          <div className="list">
+            <div className="listTitle">
+              Top Sales Items
+            </div>
             {
-              this.state.items.map((order, i) => {
+              this.state.items.slice(0,10).map((item, i) => {
                 return(
-                  <div key={i}>{order.name}: {order.count}: {order.revenue}</div>
+                  <TopSalesItem key={i} item={item}/>
                 )
               })
             }

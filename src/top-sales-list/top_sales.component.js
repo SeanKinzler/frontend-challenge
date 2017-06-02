@@ -36,13 +36,13 @@ export default class TopSalesList extends Component  {
             {
               this.state.items.slice(0,10).map((item, i) => {
                 return(
-                  <div key={i}>
-                    <hr />
-                    <div className="belowHr">
-                      <div className="circle">
-                        {i + 1}
-                      </div>
-                      <div className="item">
+                  <div className={Styles.itemCont} key={i}>
+                    <div className={Styles.circle}>
+                      {i + 1}
+                    </div>
+                    <div className={Styles.item}>
+                      <hr className={Styles.hr}/>
+                      <div>
                         <div className={Styles.itemName}>{item.name}</div>
                         <div className={Styles.revAmt}>{item.revenue}</div>
                       </div>

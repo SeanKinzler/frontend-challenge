@@ -1,16 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 
 .list {
-  width: 50%;
+  width: 400px;
   font-family: Roboto;
   font-weight: 100;
-  border-width: 1px;
+  border: 1px solid #e9eaeb;
   display: flex;
   flex-direction: column;
+  padding: 5px;
 }
 
 .listTitle {
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .itemName {
@@ -23,15 +25,39 @@
   color: #CCCCCC;
 }
 
-.circle {
-  font-size: 30px;
-  color: #000000;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px; 
+.hr {
+  border: none;
+  height: 1px;
+  background-color: #e9eaeb;
+  color: #e9eaeb;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }
 
-.belowHr {
+.circle {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background-color: #9bca3c;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 28px;
+  width: 34px;
+  height: 28px; 
+  border-radius: 50%;
+  padding: 1.5px;
+}
+
+.item {
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 100%;
+}
+
+.itemCont {
   display: flex;
   flex-direction: row;
+  align-items:center;
 }

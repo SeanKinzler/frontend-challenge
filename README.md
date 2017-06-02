@@ -1,5 +1,9 @@
 # HotSchedules Front-end Engineering Challenge
 
+## Start using Webpack Devserver:
+npm run devServ
+visit http://localhost:8080/test-app/react_app.html to see rendered react app
+
 ## Narrative 
 
 After realizing the user experience of their application suite is disjointed, shadowy upper-management figures

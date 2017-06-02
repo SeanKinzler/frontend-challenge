@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
-import Styles from './top_sales.css';
+import Styles from './top_sales.scss';
 import axios from 'axios';
 import transformData from '../utils/transformData.js';
 import TopSalesItem from './top_sales_item.js';
 import map from 'lodash';
+console.log(Styles.list);
 
 // export default TopSalesList;
 //write top sales list component here
@@ -28,14 +29,25 @@ export default class TopSalesList extends Component  {
 
     render() {
         return (
-          <div className="list">
-            <div className="listTitle">
+          <div className={Styles.list}>
+            <div className={Styles.listTitle}>
               Top Sales Items
             </div>
             {
               this.state.items.slice(0,10).map((item, i) => {
                 return(
-                  <TopSalesItem key={i} item={item}/>
+                  <div key={i}>
+                    <hr />
+                    <div className="belowHr">
+                      <div className="circle">
+                        {i + 1}
+                      </div>
+                      <div className="item">
+                        <div className={Styles.itemName}>{item.name}</div>
+                        <div className={Styles.revAmt}>{item.revenue}</div>
+                      </div>
+                    </div>
+                  </div>
                 )
               })
             }
